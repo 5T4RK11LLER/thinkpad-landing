@@ -1,0 +1,115 @@
+@use "sass:map";
+
+// 1. Funciones
+@import "bootstrap/scss/functions";
+
+// 2. Tus variables (sobrescriben las de Bootstrap)
+@import "variables";
+
+// 3. Variables de Bootstrap
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// 4. Fusionar tus colores personalizados
+$theme-colors: map.merge($theme-colors, $custom-colors);
+
+// 5. Todo Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// 6. Ajustes por tema
+[data-bs-theme="light"] {
+  --bs-primary: #c8141c;
+  --bs-primary-rgb: 200, 20, 28;
+  --bs-link-color: #c8141c;
+  --bs-link-hover-color: #9f0f16;
+}
+
+[data-bs-theme="dark"] {
+  --bs-primary: #e4202a;
+  --bs-primary-rgb: 228, 32, 42;
+  --bs-link-color: #e4202a;
+  --bs-link-hover-color: #ff4d55;
+}
+
+// ===== OUTLINE PRIMARY (mixin reutilizable) =====
+@mixin btn-outline-primary-theme($color, $border, $active-bg, $rgb) {
+  --bs-btn-color: #{$color};
+  --bs-btn-border-color: #{$border};
+  --bs-btn-bg: transparent;
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #{$border};
+  --bs-btn-hover-border-color: #{$border};
+
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #{$active-bg};
+  --bs-btn-active-border-color: #{$active-bg};
+
+  --bs-btn-focus-shadow-rgb: #{$rgb};
+
+  --bs-btn-disabled-color: #{$color};
+  --bs-btn-disabled-border-color: #{$border};
+}
+
+[data-bs-theme="light"] .btn-outline-primary { @include btn-outline-primary-theme(#c8141c, #c8141c, #9f0f16, (200, 20, 28)); }
+[data-bs-theme="dark"]  .btn-outline-primary { @include btn-outline-primary-theme(#ff4d55, #e4202a, #b81820, (228, 32, 42)); }
+
+[data-bs-theme="light"] .btn-outline-secondary {
+  --bs-btn-color: #18181a;
+  --bs-btn-border-color: #d8d8d6;
+  --bs-btn-hover-color: #18181a;
+  --bs-btn-hover-bg: #eeeeec;
+  --bs-btn-hover-border-color: #18181a;
+  --bs-btn-active-bg: #d8d8d6;
+  --bs-btn-active-color: #18181a;
+  --bs-btn-active-border-color: #18181a;
+}
+
+[data-bs-theme="dark"] .btn-outline-secondary {
+  --bs-btn-color: #ececec;
+  --bs-btn-border-color: #2c2c2e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #171718;
+  --bs-btn-hover-border-color: #9a9a9d;
+  --bs-btn-active-bg: #2c2c2e;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-border-color: #9a9a9d;
+}
+
+// ===== CARRUSEL=====
+#carouselExampleCaptions .btn-outline-primary {
+  @include btn-outline-primary-theme(#c8141c, #c8141c, #9f0f16, (200, 20, 28));
+}
+
+// ===== COMPONENTES COMPARTIDOS =====
+.navbar-thinkpad {
+  border-bottom: 1px solid var(--bs-thinkpad);
+}
+
+.brand-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--bs-thinkpad);
+}
+
+.navbar .nav-link {
+  color: var(--bs-body-color);
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+
+  &:hover { color: var(--bs-thinkpad); }
+
+  &.active {
+    color: var(--bs-thinkpad);
+    border-bottom-color: var(--bs-thinkpad);
+  }
+}
+
+.footer {
+  background-color: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--bs-border-color);
+
+  p { font-size: 14px; }
+}

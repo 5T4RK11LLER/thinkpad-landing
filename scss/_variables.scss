@@ -1,0 +1,55 @@
+// ===== COLORES DE MARCA =====
+$primary:   #c8141c;  
+$secondary: #5f5f63;
+$success:   #2e9e6b;   
+$danger:    #e4202a;
+$warning:   #f0ad4e;
+$info:      #3fa7d6;
+$light:     #f7f7f5;
+$dark:      #18181a;
+
+// ===== MODO CLARO =====
+$body-bg:           #f7f7f5;
+$body-color:        #18181a;
+$body-secondary-bg: #eeeeec;
+$body-tertiary-bg:  #ffffff;
+$border-color:      #d8d8d6;
+$body-secondary-color: #5f5f63;
+
+// ===== MODO OSCURO =====
+$body-bg-dark:            #0b0b0c;
+$body-color-dark:         #ececec;
+$body-secondary-bg-dark:  #111112;
+$body-tertiary-bg-dark:   #171718;
+$border-color-dark:       #2c2c2e;
+$body-secondary-color-dark: #9a9a9d;
+
+// ===== BOTONES =====
+$btn-border-width:      2px;         
+$btn-border-radius:     .125rem;   
+$btn-border-radius-sm:  .125rem;
+$btn-border-radius-lg:  .25rem;
+
+$btn-padding-y:         .5rem;
+$btn-padding-x:         1.25rem;
+$btn-font-weight:       500;
+$btn-focus-width:       .2rem;
+
+// Estado deshabilitado
+$btn-disabled-opacity:  .45;
+
+// ===== TIPOGRAFÍA =====
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-family-monospace:  "JetBrains Mono", "Fira Code", SFMono-Regular, Menlo, Consolas, monospace;
+$font-family-base:       $font-family-sans-serif;   // antes era monospace
+
+$font-size-base: .875rem;   // 14px, como en la captura
+
+// ===== COLORES PERSONALIZADOS =====
+$custom-colors: (
+  "thinkpad": #e4202a,
+  "terminal": #3ddc84,
+  "wine":     #382427,
+  "secondarybg" : #212529,
+  "footertext" : #424242
+);

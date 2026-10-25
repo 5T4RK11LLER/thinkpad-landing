@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ThinkPad X1 Carbon | Reserva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/form.css">
+  </head>
+  <body>
+    <nav id="navbarNav" class="navbar navbar-expand-lg bg-body-tertiary sticky-top navbar-thinkpad">
+        <div class="container-fluid">
+            <a class="navbar-brand text-body fw-bold" href="index.html">ThinkPad <span class="brand-dot"></span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+                <li class="nav-item"><a class="nav-link" href="index.html#scrollspyHeading1">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#scrollspyHeading2">Características</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#scrollspyHeading3">Especificaciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#scrollspyHeading4">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="form.html">Contacto</a></li>
+            </ul>
+
+            <div class="d-flex gap-2">
+                <button type="button" class="btn btn-outline-secondary" id="themeToggle" aria-label="Cambiar tema"><i class="bi bi-moon-fill" id="themeIcon"></i></button>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-4">
+        <div class="d-flex flex-column align-items-center justify-content-center h-100 w-100 top-0 start-0">
+            <div class="btn btn-outline-primary bg-wine text-center w-10 mb-3 justify-content-center rounded-3 fs-6 fst-italic" role="alert">
+                    // Formulario de compra
+            </div>
+            <h2 class="text-body fw-bold">Contacta con el fabricante</h2>
+            <p class="text-secondary w-75">Solicita más información sobre tu próximo ThinkPad compatible con Linux. Nuestro equipo de ingeniería resolverá tus dudas sobre el kernel, drivers y opciones de aprovisionamiento directo.</p>
+        </div>
+    </section>
+
+    <section class="d-flex justify-content-center align-items-center min-vh-100 pb-4">
+        <div class="bg-body-tertiary p-4 rounded-2 w-75 border border-2 border-primary">
+            <!-- Sustituye action="#" por la URL de tu backend o servicio de formularios -->
+            <form class="row g-3 needs-validation" action="#" method="post" novalidate>
+                <div class="col-12">
+                    <label for="inputName" class="form-label text-body">1. NOMBRE Y APELLIDOS</label>
+                    <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Linus Torvalds" autocomplete="name" required>
+                    <div class="form-text">Introduce tu nombre o del responsable del hardware.</div>
+                    <div class="invalid-feedback">Indica tu nombre.</div>
+                </div>
+                <div class="col-6">
+                    <label for="inputCountry" class="form-label text-body">2. PAÍS</label>
+                    <input type="text" class="form-control" id="inputCountry" name="pais" placeholder="España" autocomplete="country-name" required>
+                    <div class="form-text">Territorio para asignación de logística.</div>
+                    <div class="invalid-feedback">Indica tu país.</div>
+                </div>
+                <div class="col-6">
+                    <label for="inputCity" class="form-label text-body">3. CIUDAD</label>
+                    <input type="text" class="form-control" id="inputCity" name="ciudad" placeholder="Madrid" autocomplete="address-level2" required>
+                    <div class="form-text">Ciudad para verificar soporte oficial en tienda.</div>
+                    <div class="invalid-feedback">Indica tu ciudad.</div>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail" class="form-label text-body">4. CORREO ELECTRÓNICO</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="tu@correo.com" autocomplete="email" required>
+                    <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputModel" class="form-label text-body">5. MODELO DE PRODUCTO</label>
+                    <select id="inputModel" name="modelo" class="form-select" required>
+                        <option value="" selected disabled>Selecciona un modelo...</option>
+                        <option value="x1-carbon-gen12">ThinkPad X1 Carbon Gen 12 · Linux Edition</option>
+                    </select>
+                    <div class="form-text">Todos los modelos cuentan con soporte garantizado en el árbol oficial de Linux.</div>
+                    <div class="invalid-feedback">Selecciona un modelo.</div>
+                </div>
+
+                <div class="col-12">
+                    <span class="form-label d-block text-body" id="tipoClienteLabel">6. TIPO DE CLIENTE</span>
+                    <div class="row g-2" role="radiogroup" aria-labelledby="tipoClienteLabel">
+                        <div class="col-md-6">
+                            <div class="tipo-card rounded p-3 bg-body h-100">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoCliente" id="particular" value="particular" required>
+                                    <label class="form-check-label text-body" for="particular">Particular</label>
+                                    <div class="form-text">Desarrollador independiente o estudiante.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="tipo-card rounded p-3 bg-body h-100">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoCliente" id="empresa" value="empresa" checked>
+                                    <label class="form-check-label text-body" for="empresa">Empresa</label>
+                                    <div class="form-text">Despliegue corporativo o compras al por mayor.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-text">Permite dirigir tu consulta con un asesor técnico personal o un ejecutivo B2B.</div>
+                </div>
+
+                <div class="col-12">
+                    <label for="mensaje" class="form-label text-body">7. MENSAJE</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <div class="form-text">Indica detalles técnicos para que el equipo de soporte de hardware prepare tu respuesta sin demoras.</div>
+                    <div class="invalid-feedback">Escribe tu mensaje.</div>
+                </div>
+
+                <div class="col-12 pt-3 border-top">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="privacidad" required>
+                        <label class="form-check-label text-body" for="gridCheck">
+                            Acepto la política de privacidad y el tratamiento de mis datos de contacto para la gestión técnica y comercial de esta solicitud por parte de Lenovo ThinkPad.
+                        </label>
+                        <div class="invalid-feedback">Debes aceptar la política de privacidad.</div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">
+                        Solicitar Información
+                        <i class="bi bi-arrow-right text-light"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer text-secondary pt-5 pb-3">
+            <div class="container text-start">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-body">LENOVO / THINKPAD</h5>
+                        <p>Lenovo Group Ltd. División Global de Soluciones Abiertas y Estaciones de Trabajo Móviles.</p>
+                        <p>
+                            <i class="bi bi-geo-alt text-primary"></i>
+                            Morrisville, North Carolina, EE. UU.
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone text-primary"></i>
+                            +1 (855) 253-6686 / +34 988 812 000
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope text-primary"></i>
+                            linux-support@lenovo.com
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-body">ECOSISTEMA</h5>
+                        <p>X1 Carbon Gen 12</p>
+                        <p>Guía de Hardware Linux</p>
+                        <p>Repositorio LVFS</p>
+                        <p>Puntos de venta certificados</p>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-body">LEGAL Y SOPORTE</h5>
+                        <p>Garantía Premier Linux</p>
+                        <p>Privacidad de datos</p>
+                        <p>Manuales de servicio abiertos</p>
+                        <p>Cumplimiento GPL & Kernel</p>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-body">COMUNIDAD</h5>
+                        <p class="d-flex gap-3">
+                            <a href="https://github.com">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                            <a href="https://discord.com">
+                                <i class="bi bi-discord fs-5"></i>
+                            </a>
+                            <a href="https://joinmastodon.org/es">
+                                <i class="bi bi-mastodon fs-5"></i>
+                            </a>
+                            
+                        </p>
+                        <p>
+                            <i class="bi bi-hearts text-primary"></i>
+                            "Hecho para la comunidad del software libre"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row pt-4 border-top">
+                    <div class="col-6">
+                        <p>
+                            © 2025 Lenovo. Todos los derechos reservados. ThinkPad es marca registrada de Lenovo.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p>
+                            Linux® es una marca registrada de Linus Torvalds en EE. UU. y otros países.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

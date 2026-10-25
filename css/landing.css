@@ -1,0 +1,59 @@
+/* Estilos exclusivos de la landing. Navbar y footer comunes están en custom.scss */
+.popover-brand {
+  --bs-popover-bg: #1c1c1e;
+  --bs-popover-border-color: #333;
+  --bs-popover-border-radius: .375rem;
+  --bs-popover-max-width: 260px;
+  --bs-popover-header-bg: transparent;
+  --bs-popover-header-color: var(--bs-thinkpad);
+  --bs-popover-body-color: #e9ecef;
+  font-family: inherit; /* hereda la tipografía mono de tu página */
+}
+
+.popover-brand .popover-header {
+  border-bottom: 0;
+  padding-bottom: 0;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.popover-brand .popover-header i {
+  margin-right: .25rem;
+}
+
+.popover-brand .popover-body {
+  padding-top: .35rem;
+  font-size: .85rem;
+}
+
+.popover-brand .popover-meta {
+  display: block;
+  margin-top: .25rem;
+  font-size: .7rem;
+  color: #8b8f94;
+}
+
+.store-list {
+  max-width: 800px;
+  background-color: var(--bs-tertiary-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: .375rem;
+}
+
+.store-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bs-secondary-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: .375rem;
+  color: var(--bs-thinkpad);
+  font-size: 1.1rem;
+}
+
+section[id] { 
+    scroll-margin-top: 70px; 
+}
+
+#scrollspyHeading4 { 
+    min-height: 100vh; 
+}
