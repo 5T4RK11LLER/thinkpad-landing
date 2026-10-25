@@ -57,3 +57,7 @@ section[id] {
 #scrollspyHeading4 { 
     min-height: 100vh; 
 }
+
+.zoomable { 
+  cursor: zoom-in; 
+}
